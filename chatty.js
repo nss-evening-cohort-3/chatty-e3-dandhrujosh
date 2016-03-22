@@ -21,8 +21,7 @@ var Chatty = (function() {
       var mList=document.getElementById("mContainer")
         let currentmboard = mboard[i];
         outputString += `<div class="eachMessage">${currentmboard.message}<p><button class='del'>Delete</button></p></div>`
-        mList.innerHTML += outputString;
-
+        mList.innerHTML = outputString;
       }
      }
     }
