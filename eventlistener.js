@@ -46,6 +46,18 @@ let userMessage = [];
 
 
 
+<<<<<<< HEAD
+    // if(currcard.classList.contains('selected')){
+    //   let newBio = event.currentTarget.value;
+    //   currBio.innerHTML = newBio;
+    //   console.log(event );
+
+// When the user clicks on the dark theme checkbox, change the background color of your application to a dark gray, and the font color for messages should be white(ish)... you pick.
+// If the user unchecks the box, the background color should change back to white with black text for messages.
+// document.getElementById("dark").addEventListener("click", function() {
+//     document.getElementById("mContainer").classList.add("darkTheme");   
+// });
+=======
   // addBtn:function(divOutput) {
   //     let erase = document.getElementsByClassName("delete");
   //     console.log("erase", erase );
@@ -55,3 +67,4 @@ let userMessage = [];
   //       currentMessage.remove();
   //   })
   // }
+>>>>>>> 10e5a97c72628c59e5c7d0e0dd221135a605eb2e

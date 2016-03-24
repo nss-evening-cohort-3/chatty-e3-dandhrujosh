@@ -1,11 +1,11 @@
-
-
+/*HEADER CHATTY*/
 .brand{
   font-style: oblique;
   font-size: 40px;
   float: left;
 }
 
+/*NAV BAR*/
 #nav {
   padding: 40px 40px 20px 100px;
   /*display: inline-block;*/
@@ -21,8 +21,15 @@
   height: 40px;
 }
 
-#dark input[type="checkbox"]{
-  color: blue;
+/*MAIN MESSAGE CONTAINER*/
+.darkTheme1{  
+  background-color: white;
+  color: black;
+}
+
+.darkTheme2{  
+  background-color: gray;
+  color: white;
 }
 
 #mContainer{
