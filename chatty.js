@@ -11,21 +11,19 @@ var Chatty = (function() {
           loader.send();//tell loader to execute
 
       loader.addEventListener("load", function () {
-        mboard = JSON.parse(this.responseText).mBoard;
-         showMessagesCallback(mboard);
+         let xhrCrap = (JSON.parse(this.responseText).mBoard);
+         xhrCrap.forEach(function(oneXhr){
+         mboard.push(oneXhr)  
+         }) 
+         showMessagesCallback(mboard)
           });
         },
-    showMessages: function(mboard){
-      let outputString = "";
-      for (var i = 0; i < mboard.length; i++) {
-      var mList=document.getElementById("mContainer")
-        let currentmboard = mboard[i];
-        outputString += `<div class="eachMessage">${currentmboard.message}<p><button class='del'>Delete</button></p></div>`
-        mList.innerHTML = outputString;
-      }
-     }
-    }
-      
+    
+      getmboard: function(){
+        Chatty.loadMessages(Chatty.showMessages)
+      }     
+    };
   })();
-      
-  Chatty.loadMessages(Chatty.showMessages);
+  
+  
+  
