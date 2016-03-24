@@ -1,17 +1,12 @@
 "use strict"
 
-  
-var eventCreator = (function (originalChatty){
+var Chatty = (function (originalChatty){
 let input = document.getElementById('inputText');
 let userMessage = [];
   
 // console.log("erase", erase );
   
-
-  return {
-  
-
-  keyEvent: function(addDivCallBack){
+  originalChatty.keyEvent = function(addDivCallBack){
   input.addEventListener('keypress', function(event){
         if(event.keyCode === 13)
         {
@@ -19,20 +14,38 @@ let userMessage = [];
         }
     addDivCallBack(userMessage);
       });
-  },
-
-  addDiv: function(userMessage){
-    for (let i = 0; i < userMessage.length; i++) {
-      let currentMessage = userMessage[i];
-      let currentId = "msgContainer" + i;
-      console.log("current", currentId);
-      let divOutput = `<div id = ${currentId} <section><p class="message">${currentMessage}</p></section><input type="button" class="delete" value="Delete"></div>`;
-      mContainer.innerHTML += divOutput;
+  }
+   originalChatty.showMessages = function(mboard2){
+      // console.log("mboard2", mboard2);
+      let outputString = "";
+      for (var i = 0; i < mboard2.length; i++) {
+      var mList=document.getElementById("mContainer")
+        let currentmboard = mboard2[i];
+        outputString += `<div id="eachMessage${i}">${currentmboard.message}<p><button class="del">Delete</button></p></div>`
+        // console.log("output", outputString );
+        mList.innerHTML = outputString;
       }
-      // addBtn(divOutput);
-      }
+     }
+  return originalChatty;
+  })(Chatty);
+  Chatty.getmboard();
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // addBtn:function(divOutput) {
   //     let erase = document.getElementsByClassName("delete");
   //     console.log("erase", erase );
@@ -42,11 +55,3 @@ let userMessage = [];
   //       currentMessage.remove();
   //   })
   // }
-}
-  return originalChatty;
-  })(Chatty);
-  Chatty.getmboard();
-  console.log("mboard", Chatty.getmboard);
-  eventCreator.keyEvent(eventCreator.addDiv);
-
-    
