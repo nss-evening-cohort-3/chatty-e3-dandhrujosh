@@ -1,18 +1,33 @@
 /*HEADER CHATTY*/
-.brand{
+#brand{
   font-style: oblique;
   font-size: 40px;
-  float: left;
+  position:fixed;
+  z-index:100;
 }
 
 /*NAV BAR*/
-#nav {
-  padding: 40px 40px 20px 100px;
-  /*display: inline-block;*/
+/*.nav {
+  padding: 40px 40px 20px 0;
+  position:fixed;
+  z-index:100;
+
+}*/
+/*Inputs*/
+#ourinputs {
+float:right;
+position:fixed;
+z-index:100;
+width:40%;
+padding: 30px 0 0 315px;
 }
 
+
+  
+
+
 #inputText{
-  width: 1000px;
+  width: 850px;
   height: 50px;
 }
 
@@ -34,5 +49,5 @@
 
 #mContainer{
   border: solid black;
-  padding: 50px;
+  padding: 150px;
 }
