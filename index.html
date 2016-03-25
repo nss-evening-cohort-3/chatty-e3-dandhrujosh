@@ -7,18 +7,18 @@
 <body>
 
   <header>
-    <h1 class="brand">Chatty ໒( ͡ᵔ ▾ ͡ᵔ )७</h1>
+    <h1 id="brand" >Chatty ໒( ͡ᵔ ▾ ͡ᵔ )७</h1>
   </header>
   
-  <nav id="nav">
-    <input type="text" placeholder="Search" id="inputText" >
+  <nav id="ourinputs">
+    <input type="text" placeholder="Enter Message Here" id="inputText" >
     <button type="submit" id="clrButton">Clear Message Board</button> 
+    <label for="dark">Dark theme</label>
+    <input type="checkbox" id="dark">
+    <label for="large">Large text</label>
+    <input type="checkbox" id="large">
   </nav> 
 
- <label for="dark">Dark theme</label>
- <input type="checkbox" id="dark">
- <label for="large">Large text</label>
- <input type="checkbox" id="large">
 
  <div id="mContainer" class="darkTheme1">
    
@@ -27,5 +27,6 @@
   <script type="text/javascript" src="chatty.js"></script>
   <script type="text/javascript" src="eventlistener.js"></script>
   <script type="text/javascript" src="display.js"></script>
+  <script type="text/javascript" src="delete.js"></script>
 </body>
 </html>

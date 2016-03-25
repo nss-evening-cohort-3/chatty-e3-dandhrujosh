@@ -2,11 +2,17 @@
 "use strict"
 
 var Chatty = (function() {
-  var mboard = [];
+  let mboard = [];
+  let container = document.getElementById("mContainer")
+
 // When the user clicks on the dark theme checkbox, change the background color of your application to a dark gray, and the font color for messages should be white(ish)... you pick.
 // If the user unchecks the box, the background color should change back to white with black text for messages.
   document.getElementById("dark").addEventListener("click", function() {
-  document.getElementById("mContainer").classList.toggle("darkTheme2");   
+  container.classList.toggle("darkTheme2"); 
+  
+  // document.getElementById("large").addEventListener("click", function(){
+  // container.classList.toggle("largetext")
+  //   })  
   });
   
   return {
@@ -26,7 +32,17 @@ var Chatty = (function() {
         
       getmboard: function(){
         Chatty.loadMessages(Chatty.showMessages)
+      },
+
+      retMboard: function(){
+        return mboard
+      },
+
+      setmboard: function(message){
+        mboard.push({"message":message})
+
       }
+
     
     };
   })();
