@@ -35,11 +35,10 @@ var Chatty = (function (originalChatty){
     originalChatty.addDlt = function(){
   for(let i = 0; i < erase.length; i++){
     let dltBtn = erase[i]
-    // console.log("theCard", dltBtn);
     dltBtn.addEventListener("click", function(event){
-      console.log("event", event);
+      Chatty.deleteButton(i);
 })
-    // document.getElementById("eachMessage").addEventListener("click", Chatty.deleteButton);
+    
 
   }
 
