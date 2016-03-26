@@ -12,16 +12,19 @@ var Chatty = (function() {
     container.classList.toggle("darkTheme2"); 
 }); 
 
+// Event Listener to toggle largetext css class
   document.getElementById("large").addEventListener("click", function() {
     container.classList.toggle("largetext"); 
 });
-  
+
+ // Event Listener to clear container and hide clear messages button
   document.getElementById("clrButton").addEventListener("click", function(){
     container.innerHTML = "";
     clrButton.classList.add("hidden");
 });
 
   return {
+    // Function to load JSON --> XHR callback
     loadMessages: function (showMessagesCallback) {
       var loader = new XMLHttpRequest();//constructor function
           loader.open("GET","messages.json");//tell loader where to go
@@ -35,15 +38,15 @@ var Chatty = (function() {
          showMessagesCallback(mboard)
           });
         },
-        
+// Shows Messages
     getmboard: function(){
         Chatty.loadMessages(Chatty.showMessages)
       },
-
+// Returns mboard to make available later
     retMboard: function(){
         return mboard
       },
-
+// Takes user input message pushes to our private array
     setmboard: function(message){
         mboard.push({"message":message})
 

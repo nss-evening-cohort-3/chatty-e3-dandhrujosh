@@ -6,7 +6,6 @@
   z-index:100;
 }
 
-
 /*Inputs*/
 #ourinputs {
 float:right;
@@ -15,9 +14,6 @@ z-index:100;
 width:40%;
 padding: 30px 0 0 315px;
 }
-
-
-  
 
 /*User input text box*/
 #inputText{
@@ -48,7 +44,6 @@ padding: 30px 0 0 315px;
   border: solid black;
   padding: 150px;
 }
-
 
 /*Clear Button Classes*/
 .hidden{
