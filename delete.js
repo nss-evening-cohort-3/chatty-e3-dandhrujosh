@@ -1,4 +1,7 @@
 "use strict"
+//deletes each message gets called in second iife under eventlistener
+//takes each message ID as an argument the index is used bc it matches up to the delete button 
+//indexes and makes it so only one message is deleted at a time
 var Chatty = (function(originalChatty) {
   originalChatty.deleteButton = function(i){
       let selected = document.getElementById(`eachMessage${[i]}`)
