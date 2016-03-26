@@ -1,5 +1,6 @@
 "use strict"
 
+let usInput = document.getElementById("inputText")
 
 let input = document.getElementById('inputText');
   input.addEventListener('keypress', function(event){
@@ -8,6 +9,7 @@ let input = document.getElementById('inputText');
           Chatty.setmboard(input.value);
           Chatty.showMessages(Chatty.retMboard());
           showClearBtn();
+          usInput.value = "";
   }
 });
   
